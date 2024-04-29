@@ -45,6 +45,9 @@ body {
 .neutral-star {
     color: var(--main-bg-color)
 }
+.euro {
+    font-weight: bold;
+}
 
 
 
@@ -97,7 +100,6 @@ main .container .info-group .titre-de-page {
     margin-top: 1%;
 }
 .info-group .form {
-    width: 100%;
     border-radius: 15px;
     padding: 0 24px;
     display: flex;
@@ -108,6 +110,7 @@ main .container .info-group .titre-de-page {
     border-radius: 15px 0px 0px 15px;
     padding: 2px;
     color: black;
+    font-size: 18px;
   }
 .info-group .form label {
     background-color: #F2F2F2;
@@ -118,14 +121,16 @@ main .container .info-group .titre-de-page {
     border: 1px #DEEBFF ;
     border-radius: 0px 15px 15px 0;
     padding: 15px 16px 15px 16px;
-    width: 132px;
-    gap: 10px;
   }
 .info-group .form input[value="Marseille, France"] {
-    width: 11%;
+    width: 193px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #f2f2f2;
+    border-top: 1px solid #f2f2f2;
   }
 .info-group .form button {
-    background-color: blue;
+    background-color: #0065FC;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -153,7 +158,20 @@ main .container .info-group .titre-de-page {
 .info-group .filtres-content button i {
     margin-right: 10px;
 }
-
+.info-group .filtres-content button span {
+    font-weight: bold;
+}
+.info-group p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.info-group p i {
+    border: solid 2px #D9D9D9;
+    border-radius: 61px;
+    padding: 4px 7px 4px 7px;
+    font-size: 10px;
+}
 
 
 /****** STYLES DES HEBERGEMENTS And POPULAIRES ***********/
@@ -210,11 +228,11 @@ main .container .info-group .titre-de-page {
 .hebergements-cards a article img {
     width: 100%;
     height: 115px;
-    border-top-left-radius: 20px;
-    border-top-right-radius : 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius : 15px;
 }
 
-.hebergements-cards a article .card-content {
+.hebergements-cards .card-content {
     width: 100%;
     display: flex;
     flex-direction:column ;
@@ -258,8 +276,8 @@ main .container .info-group .titre-de-page {
 .populaires .populaires-cards article img {
     width: 33%;
     height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .populaires .populaires-cards .card-content {
@@ -320,8 +338,8 @@ main .container .info-group .titre-de-page {
     padding: 0;
     box-sizing: border-box;
 }
-.activites .activites-cards a article img .card-title {
-    padding-left: 4%;
+.activites .activites-cards .card-title {
+    padding-left: 5%;
 }
 
 
@@ -339,6 +357,7 @@ footer {
   footer div {
     text-align: start;
     flex: 1;
+    line-height: 1.8;
   }
   footer h2 {
     text-align: start;
@@ -365,7 +384,7 @@ footer {
         font-size: 20px;
     }
     p {
-        font-size: 14px;
+        font-size: 15px;
     }
     nav .nav-links {
         width: 30%;
@@ -463,11 +482,17 @@ footer {
     body {
         margin: 0;
     }
+    p {
+        font-size: 15px;
+    }
     nav {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+    nav img {
+        margin-top: 20px;
     }
     nav .nav-links {
         width: 100%;
@@ -491,7 +516,7 @@ footer {
     }
     .info-group .form {
         padding: 0;
-        margin-top: 30px;
+        margin: 30px 0 15px 0;
     }
     .info-group .form label {
         padding: 14px;
@@ -506,7 +531,6 @@ footer {
     .info-group .form button i {
         display: inline-block;
         color: white;
-        margin-right: 7px;
     }
     .info-group .form button span {
         display: none;
@@ -514,14 +538,23 @@ footer {
     .info-group .filtres {
         display: flex;
         width: 100%;
+        gap: 0;
         flex-direction: column;
         align-items: start;
     }
+    .info-group .filtres-content {
+        width: 100%;
+    }
     .info-group .filtres-content button {
-        width: 45%;
-        padding: 18px 9px;
+        width: 49%;
+        padding: 13px 3px;
         margin-bottom: 20px;
-        border-radius: 26px;
+        border-radius: 90px;
+        margin-right: 0;
+    }
+    h2 .section-title {
+        font-size: 18px;
+        margin: 12px 12px 0 0;
     }
     .hebergements-and-populaires section {
         padding: 0;
@@ -542,11 +575,15 @@ footer {
         display:list-item ;
         margin: 12px;
     }
+    .populaires .populaires-cards article {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
     .hebergements-and-populaires .hebergements {
         background-color: white;
     }
     .hebergements-title {
-        margin: 12px;
+        margin: 12px 12px 0 12px;
     }
     .hebergements-cards {
         display: list-item;
@@ -554,6 +591,8 @@ footer {
     }
     .hebergements-cards a {
         width: 100%;
+        margin-top: 0;
+        margin-bottom: 15px;
     }
     .hebergements h4 {
         margin-top: 10px;
@@ -564,7 +603,7 @@ footer {
     }
     .activites-title {
         width: 100%;
-        margin: 15px;
+        margin: 15px 15px 30px 15px;
     }
     .activites .activites-cards {
         display: flex;
@@ -606,7 +645,12 @@ footer {
       footer div {
         text-align: start;
         flex: 1;
-        margin-bottom: 40px;
-        margin: 10px 15px 40px 15px;
+        margin: 10px 15px 15px 15px
+      }
+      footer h2 {
+        margin: 10px 0 5px 0;
+      }
+      footer ul {
+        margin: 0;
       }
 }
